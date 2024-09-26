@@ -1,0 +1,261 @@
+:root {
+  /* Primary */
+  --orange: hsl(31, 77%, 52%);
+  --dark-cyan: hsl(184, 100%, 22%);
+  --very-dark-cyan: hsl(179, 100%, 13%);
+  /* Neutral */
+  --transparent-white: hsla(0, 0%, 100%, 0.75);
+  --very-light-gray: hsl(0, 0%, 95%);
+}
+
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/*
+  2. Remove default margin
+*/
+* {
+  margin: 0;
+}
+
+/*
+  Typographic tweaks!
+  3. Add accessible line-height
+  4. Improve text rendering
+*/
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+/*
+  5. Improve media defaults
+*/
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+/*
+  6. Remove built-in form typography styles
+*/
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/*
+  7. Avoid text overflows
+*/
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/*
+  8. Create a root stacking context
+*/
+#root,
+#__next {
+  isolation: isolate;
+}
+
+a {
+  text-decoration: none;
+}
+
+@font-face {
+  font-family: "font-medium";
+  src: url("../assets/font/lexend-deca/LexendDeca-Medium.ttf") format("woff2");
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "font-bold";
+  src: url("../assets/font/big-shoulders-display/BigShouldersDisplay-Bold.ttf")
+    format("woff2");
+  font-weight: 700;
+}
+
+/* styles */
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: hsl(0, 0%, 95%);
+}
+
+.container {
+  max-width: 70rem;
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.sedans,
+.suvs,
+.luxury {
+  width: 19rem;
+  padding: 2.8rem;
+}
+
+.card-title {
+  font-family: "font-bold";
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: hsl(0, 0%, 95%);
+  margin: 1.5rem 0;
+}
+
+.card-paragraph {
+  font-family: "font-medium";
+  font-size: 0.938rem;
+  line-height: 1.7;
+  color: var(--transparent-white);
+  margin-bottom: 4rem;
+}
+
+.sedans {
+  border-radius: 0.625rem 0 0 0.625rem;
+}
+
+.sedans .button {
+  font-family: "font-medium";
+  color: var(--orange);
+  border-radius: 1.25rem;
+  padding: 0.625rem 2rem;
+  border: none;
+  box-sizing: border-box;
+  background-color: var(--very-light-gray);
+}
+
+.sedans .button:hover {
+  color: var(--transparent-white);
+  border: solid 1px var(--transparent-white);
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.suvs .button {
+  font-family: "font-medium";
+  color: var(--dark-cyan);
+  border-radius: 1.25rem;
+  padding: 0.625rem 2rem;
+  border: none;
+  box-sizing: border-box;
+  background-color: var(--very-light-gray);
+}
+
+.suvs .button:hover {
+  color: var(--transparent-white);
+  border: solid 1px var(--transparent-white);
+  background-color: transparent;
+  cursor: pointer;
+}
+
+.luxury {
+  border-radius: 0 0.625rem 0.625rem 0;
+}
+
+.luxury .button {
+  font-family: "font-medium";
+  color: var(--very-dark-cyan);
+  border-radius: 1.25rem;
+  padding: 0.625rem 2rem;
+  border: none;
+  box-sizing: border-box;
+  background-color: var(--very-light-gray);
+}
+
+.luxury .button:hover {
+  color: var(--transparent-white);
+  border: solid 1px var(--transparent-white);
+  background-color: transparent;
+  cursor: pointer;
+}
+
+#orange {
+  background-color: hsl(31, 77%, 52%);
+}
+
+#cyan {
+  background-color: hsl(184, 100%, 22%);
+}
+
+#dark-cyan {
+  background-color: hsl(179, 100%, 13%);
+}
+
+@media (max-width: 900px) {
+  body {
+    margin: 2rem 0;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .card-paragraph {
+    font-size: 0.875rem;
+    margin-bottom: 2rem;
+  }
+
+  .sedans {
+    border-radius: 0.625rem 0.625rem 0 0;
+  }
+
+  .luxury {
+    border-radius: 0 0 0.625rem 0.625rem;
+  }
+}
+
+@media (max-width: 500px) {
+  body {
+    margin: 5rem 0;
+  }
+
+  .cards {
+    grid-template-columns: 1fr;
+  }
+
+  .card-paragraph {
+    font-size: 0.875rem;
+    margin-bottom: 2rem;
+  }
+
+  .sedans {
+    border-radius: 0.625rem 0.625rem 0 0;
+  }
+
+  .luxury {
+    border-radius: 0 0 0.625rem 0.625rem;
+  }
+  .suvs .button,
+  .sedans .button,
+  .luxury .button {
+    font-size: 0.875rem;
+    padding: 0.813rem 1.7rem;
+  }
+}
