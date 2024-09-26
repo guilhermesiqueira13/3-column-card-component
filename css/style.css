@@ -162,7 +162,7 @@ body {
   font-family: "font-medium";
   color: var(--dark-cyan);
   border-radius: 1.25rem;
-  padding: 0.625rem 2rem;
+  padding: 0.725rem 1rem;
   border: none;
   box-sizing: border-box;
   background-color: var(--very-light-gray);
@@ -183,7 +183,7 @@ body {
   font-family: "font-medium";
   color: var(--very-dark-cyan);
   border-radius: 1.25rem;
-  padding: 0.625rem 2rem;
+  padding: 0.725rem 1rem;
   border: none;
   box-sizing: border-box;
   background-color: var(--very-light-gray);
