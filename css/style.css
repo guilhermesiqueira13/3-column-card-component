@@ -123,15 +123,15 @@ body {
 
 .card-title {
   font-family: "font-bold";
-  font-size: 2rem;
+  font-size: 2.5rem;
   text-transform: uppercase;
   color: hsl(0, 0%, 95%);
-  margin: 1.5rem 0;
+  margin: 2rem 0;
 }
 
 .card-paragraph {
   font-family: "font-medium";
-  font-size: 0.938rem;
+  font-size: 1rem;
   line-height: 1.7;
   color: var(--transparent-white);
   margin-bottom: 4rem;
@@ -145,7 +145,7 @@ body {
   font-family: "font-medium";
   color: var(--orange);
   border-radius: 1.25rem;
-  padding: 0.625rem 2rem;
+  padding: 0.725rem 1rem;
   border: none;
   box-sizing: border-box;
   background-color: var(--very-light-gray);
